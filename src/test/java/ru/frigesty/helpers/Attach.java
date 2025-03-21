@@ -1,4 +1,4 @@
-package ru.frigesty.halpers;
+package ru.frigesty.helpers;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;

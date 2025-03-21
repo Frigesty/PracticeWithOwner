@@ -3,7 +3,9 @@ package ru.frigesty.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${env}.properties"
+        "classpath:${env}.properties",
+        "system:properties",
+        "system:env"
 })
 
 public interface WebDriverConfig extends Config {

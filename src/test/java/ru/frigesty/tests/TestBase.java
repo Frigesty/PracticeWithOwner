@@ -4,14 +4,14 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ru.frigesty.config.WebDriverConfig;
-import ru.frigesty.halpers.Attach;
+import ru.frigesty.helpers.Attach;
 import java.util.Map;
+
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
@@ -51,9 +51,6 @@ public class TestBase {
             Attach.pageSource();
             Attach.browserConsoleLogs();
         }
-    }
-    @AfterAll
-    public static void tearDownWebDriver () {
         closeWebDriver();
     }
 }
